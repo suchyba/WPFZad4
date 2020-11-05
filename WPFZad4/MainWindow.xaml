@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:WPFZad4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Label DockPanel.Dock="Top" Margin="10">Lista użytkowników:</Label>
+        <Button Name="CloseButton" DockPanel.Dock="Bottom" Margin="5" Padding="5" Click="CloseButton_Click">Zamknij</Button>
+        <StackPanel DockPanel.Dock="Right" Margin="10">
+            <Button Name="AddButton" Margin="5" Padding="20, 5" Click="AddButton_Click">Dodaj...</Button>
+            <Button Name="RemoveButton" Margin="5" Padding="20, 5" IsEnabled="False" Click="RemoveButton_Click">Usuń</Button>
+            <Button Name="EditButton" Margin="5" Padding="20, 5" IsEnabled="False" Click="EditButton_Click">Edytuj...</Button>
+            <Button Name="ShowButton" Margin="5" Padding="20, 5" IsEnabled="False" Click="ShowButton_Click">Podgląd...</Button>
+        </StackPanel>
+        <ListView Name="UsersList" DockPanel.Dock="Left" Margin="5" SelectionChanged="UsersList_SelectionChanged"></ListView>
+    </DockPanel>
 </Window>
